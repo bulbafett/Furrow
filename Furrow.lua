@@ -35,7 +35,7 @@ function loop(furrows)
 		windower.add_to_chat(200, 'Furrow: Cycle complete! Restarting the loop shortly...')
 		running = true
 		coroutine.sleep(5)
-		loop()
+		loop(furrows)
 	else
 		windower.add_to_chat(200, 'Something went wrong! Please try your command again after reloading Furrow.')
 		end
@@ -288,13 +288,13 @@ function furrow_command(...)
         windower.add_to_chat(200, 'Furrow: Aborting all actions and reloading.')
 		windower.send_command('lua reload furrow')
 	elseif arg[ 1 ]:lower() == 'help' then
-        	windower.add_to_chat(200, 'Furrow commands: start stop abort plant harvest.')
+        windower.add_to_chat(200, 'Furrow commands: start stop abort plant harvest.')
 		windower.add_to_chat(200, '//furrow start # - where number is the number of furrows you have (default: 3)')
 		windower.add_to_chat(200, '//furrow stop - this attempts to gracefully stop the furrow process')
 		windower.add_to_chat(200, '//furrow abort - this attempts to forcefully stops the furrow process and reloads the LUA')
 		windower.add_to_chat(200, '//furrow plant # - where number is the number of furrows you have (default: 3)')
 		windower.add_to_chat(200, '//furrow harvest # - where number is the number of furrows you have (default: 3)')
-		windower.add_to_chat(200, '//furrow abort - where number is the number of furrows you have (default: 3)')
+		windower.add_to_chat(200, '//furrow abort - where number is the number of furrows you have (default: 3)')		
 	else
 		end
 end
