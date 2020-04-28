@@ -11,12 +11,12 @@ Furrow does not use packets. It relies on send commands. Thus, any other actions
 
 Commands: /furrow <command>
 
-plant: Plants a Revival Root in each of your furrows.
-harvest: Harvests all items from your furrows.
-start: Starts a loop that plants, waits an hour, and harvests the furrows before beginning again.
-stop: Stops all actions by reloading the addon.
-abort: Same as stop.
-help: Lists these commands.
+1)plant: Plants a Revival Root in each of your furrows. Can be given number based on current number of furrows ex: plant 2
+2)harvest: Harvests all items from your furrows. Can be given number based on current number of furrows ex: harvest 2
+3)start: Starts a loop that plants, waits an hour, and harvests the furrows before beginning again. Can be given a number based on current number of furrows ex: start 1
+4)stop: Attempts to gracefully stop the program.
+5)abort: forces a stop to the loop and reloads the lua.
+6)help: Lists these commands.
 
 Guide:
 
